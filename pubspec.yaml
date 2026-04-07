@@ -1,0 +1,337 @@
+name: cityCloud
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #本地化支持
+  flutter_localizations:
+    sdk: flutter
+  #flutter 游戏框架
+  flame: ^0.27.0
+  #flame的flare插件
+  flame_flare: ^0.1.0
+  #下拉刷新，上拉加载更多
+  pull_to_refresh: ^1.6.0
+  #toast
+  oktoast: ^2.3.2
+  #网络请求
+  dio: ^3.0.9
+  #状态管理
+  bloc: ^6.0.1
+  flutter_bloc: ^6.0.1 
+  #moor数据库相关
+  moor: ^3.3.0
+  moor_ffi: ^0.8.0
+  # 友盟统计
+  umeng_sdk:
+    path: ./local_packages/umeng_sdk/
+  # 穿山甲
+  pangolin: ^0.2.3
+  # 仿微博ui，https://github.com/huangruiLearn/flutter_hrlweibo
+  flutter_hrlweibo:
+    path: ./local_packages/flutter_hrlweibo/
+  # webview插件
+  webview_flutter: ^0.3.24
+  #加密
+  # steel_crypt: ^2.2.2+1
+  steel_crypt: ^1.5.3
+  # encrypt: ^4.0.3
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.3
+
+dev_dependencies:
+  build_runner: ^1.10.1
+  #flutter packages pub run build_runner build
+  #flutter packages pub run build_runner watch
+  #配合moor数据库使用
+  moor_generator: ^3.3.0
+  # flutter_test:
+  #   sdk: flutter
+  #设置appicon
+  flutter_launcher_icons: "^0.7.5"
+#配合flutter_launcher_icons设置app icon
+#配置好之后执行`flutter pub run flutter_launcher_icons:main`命令可以自动生成android和iOS的icon放置到合适的路径下
+flutter_icons:
+  android: "ic_launcher" 
+  ios: true
+  image_path: "assets/icon.png"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    # assets-generator-begin
+    # assets/files/*
+    - assets/files/test.html
+    # assets/images/icon/*
+    - assets/images/icon/icon_coin.png
+    - assets/images/icon/icon_cube.png
+    - assets/images/icon/icon_prosperity.png
+    - assets/images/icon/icon_topBar_back_arrow.png
+    # assets/images/background/*
+    - assets/images/background/bg_empty.png
+    # assets/images/*
+    - assets/images/building_0.png
+    - assets/images/building_1.png
+    - assets/images/building_10.png
+    - assets/images/building_11.png
+    - assets/images/building_12.png
+    - assets/images/building_13.png
+    - assets/images/building_14.png
+    - assets/images/building_15.png
+    - assets/images/building_16.png
+    - assets/images/building_2.png
+    - assets/images/building_3.png
+    - assets/images/building_4.png
+    - assets/images/building_5.png
+    - assets/images/building_6.png
+    - assets/images/building_7.png
+    - assets/images/building_8.png
+    - assets/images/building_9.png
+    - assets/images/car_0_back.png
+    - assets/images/car_0_back_shadow.png
+    - assets/images/car_0_front.png
+    - assets/images/car_0_front_shadow.png
+    - assets/images/car_0_side.png
+    - assets/images/car_0_side_shadow.png
+    - assets/images/car_10_back.png
+    - assets/images/car_10_back_shadow.png
+    - assets/images/car_10_front.png
+    - assets/images/car_10_front_shadow.png
+    - assets/images/car_10_side.png
+    - assets/images/car_10_side_shadow.png
+    - assets/images/car_11_back.png
+    - assets/images/car_11_back_shadow.png
+    - assets/images/car_11_front.png
+    - assets/images/car_11_front_shadow.png
+    - assets/images/car_11_side.png
+    - assets/images/car_11_side_shadow.png
+    - assets/images/car_12_back.png
+    - assets/images/car_12_back_shadow.png
+    - assets/images/car_12_front.png
+    - assets/images/car_12_front_shadow.png
+    - assets/images/car_12_side.png
+    - assets/images/car_12_side_shadow.png
+    - assets/images/car_1_back.png
+    - assets/images/car_1_back_shadow.png
+    - assets/images/car_1_front.png
+    - assets/images/car_1_front_shadow.png
+    - assets/images/car_1_side.png
+    - assets/images/car_1_side_shadow.png
+    - assets/images/car_2_back.png
+    - assets/images/car_2_back_shadow.png
+    - assets/images/car_2_front.png
+    - assets/images/car_2_front_shadow.png
+    - assets/images/car_2_side.png
+    - assets/images/car_2_side_shadow.png
+    - assets/images/car_3_back.png
+    - assets/images/car_3_back_shadow.png
+    - assets/images/car_3_front.png
+    - assets/images/car_3_front_shadow.png
+    - assets/images/car_3_side.png
+    - assets/images/car_3_side_shadow.png
+    - assets/images/car_4_back.png
+    - assets/images/car_4_back_shadow.png
+    - assets/images/car_4_front.png
+    - assets/images/car_4_front_shadow.png
+    - assets/images/car_4_side.png
+    - assets/images/car_4_side_shadow.png
+    - assets/images/car_5_back.png
+    - assets/images/car_5_back_shadow.png
+    - assets/images/car_5_front.png
+    - assets/images/car_5_front_shadow.png
+    - assets/images/car_5_side.png
+    - assets/images/car_5_side_shadow.png
+    - assets/images/car_6_back.png
+    - assets/images/car_6_back_shadow.png
+    - assets/images/car_6_front.png
+    - assets/images/car_6_front_shadow.png
+    - assets/images/car_6_side.png
+    - assets/images/car_6_side_shadow.png
+    - assets/images/car_7_back.png
+    - assets/images/car_7_back_shadow.png
+    - assets/images/car_7_front.png
+    - assets/images/car_7_front_shadow.png
+    - assets/images/car_7_side.png
+    - assets/images/car_7_side_shadow.png
+    - assets/images/car_8_back.png
+    - assets/images/car_8_back_shadow.png
+    - assets/images/car_8_front.png
+    - assets/images/car_8_front_shadow.png
+    - assets/images/car_8_side.png
+    - assets/images/car_8_side_shadow.png
+    - assets/images/car_9_back.png
+    - assets/images/car_9_back_shadow.png
+    - assets/images/car_9_front.png
+    - assets/images/car_9_front_shadow.png
+    - assets/images/car_9_side.png
+    - assets/images/car_9_side_shadow.png
+    - assets/images/cloud_0.png
+    - assets/images/cloud_1.png
+    - assets/images/cloud_2.png
+    - assets/images/cloud_3.png
+    - assets/images/cloud_4.png
+    - assets/images/icon_mail.png
+    - assets/images/little_people.flr
+    - assets/images/map_tile_view_0.png
+    - assets/images/map_tile_view_1.png
+    - assets/images/map_tile_view_2.png
+    - assets/images/map_tile_view_3.png
+    - assets/images/people_body_0.png
+    - assets/images/people_body_1.png
+    - assets/images/people_body_10.png
+    - assets/images/people_body_11.png
+    - assets/images/people_body_12.png
+    - assets/images/people_body_13.png
+    - assets/images/people_body_14.png
+    - assets/images/people_body_15.png
+    - assets/images/people_body_16.png
+    - assets/images/people_body_17.png
+    - assets/images/people_body_18.png
+    - assets/images/people_body_19.png
+    - assets/images/people_body_2.png
+    - assets/images/people_body_3.png
+    - assets/images/people_body_4.png
+    - assets/images/people_body_5.png
+    - assets/images/people_body_6.png
+    - assets/images/people_body_7.png
+    - assets/images/people_body_8.png
+    - assets/images/people_body_9.png
+    - assets/images/people_eye_0.png
+    - assets/images/people_eye_1.png
+    - assets/images/people_eye_10.png
+    - assets/images/people_eye_11.png
+    - assets/images/people_eye_12.png
+    - assets/images/people_eye_13.png
+    - assets/images/people_eye_14.png
+    - assets/images/people_eye_15.png
+    - assets/images/people_eye_16.png
+    - assets/images/people_eye_17.png
+    - assets/images/people_eye_18.png
+    - assets/images/people_eye_19.png
+    - assets/images/people_eye_2.png
+    - assets/images/people_eye_3.png
+    - assets/images/people_eye_4.png
+    - assets/images/people_eye_5.png
+    - assets/images/people_eye_6.png
+    - assets/images/people_eye_7.png
+    - assets/images/people_eye_8.png
+    - assets/images/people_eye_9.png
+    - assets/images/people_foot_0.png
+    - assets/images/people_foot_1.png
+    - assets/images/people_foot_10.png
+    - assets/images/people_foot_11.png
+    - assets/images/people_foot_12.png
+    - assets/images/people_foot_13.png
+    - assets/images/people_foot_14.png
+    - assets/images/people_foot_15.png
+    - assets/images/people_foot_16.png
+    - assets/images/people_foot_17.png
+    - assets/images/people_foot_18.png
+    - assets/images/people_foot_19.png
+    - assets/images/people_foot_2.png
+    - assets/images/people_foot_3.png
+    - assets/images/people_foot_4.png
+    - assets/images/people_foot_5.png
+    - assets/images/people_foot_6.png
+    - assets/images/people_foot_7.png
+    - assets/images/people_foot_8.png
+    - assets/images/people_foot_9.png
+    - assets/images/people_hair_0.png
+    - assets/images/people_hair_1.png
+    - assets/images/people_hair_10.png
+    - assets/images/people_hair_11.png
+    - assets/images/people_hair_12.png
+    - assets/images/people_hair_13.png
+    - assets/images/people_hair_14.png
+    - assets/images/people_hair_15.png
+    - assets/images/people_hair_16.png
+    - assets/images/people_hair_17.png
+    - assets/images/people_hair_18.png
+    - assets/images/people_hair_19.png
+    - assets/images/people_hair_2.png
+    - assets/images/people_hair_3.png
+    - assets/images/people_hair_4.png
+    - assets/images/people_hair_5.png
+    - assets/images/people_hair_6.png
+    - assets/images/people_hair_7.png
+    - assets/images/people_hair_8.png
+    - assets/images/people_hair_9.png
+    - assets/images/people_hand_0.png
+    - assets/images/people_hand_1.png
+    - assets/images/people_hand_2.png
+    - assets/images/people_hand_3.png
+    - assets/images/people_hand_4.png
+    - assets/images/people_hand_5.png
+    - assets/images/people_hand_6.png
+    - assets/images/people_hand_7.png
+    - assets/images/people_hand_8.png
+    - assets/images/people_hand_9.png
+    - assets/images/people_nose_0.png
+    - assets/images/people_nose_1.png
+    - assets/images/people_nose_2.png
+    - assets/images/tree_0.png
+    - assets/images/tree_1.png
+    - assets/images/tree_2.png
+    - assets/images/tree_3.png
+    - assets/images/tree_4.png
+    - assets/images/tree_5.png
+    - assets/images/wall.png
+    # assets-generator-end
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
